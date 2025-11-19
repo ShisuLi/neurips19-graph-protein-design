@@ -7,9 +7,36 @@ Our approach 'designs' protein sequences for target 3D structures via a graph-co
 
 
 ## Overview
-* `struct2seq/` contains model code
-* `experiments/` contains scripts for training and evaluating the model
+* `struct2seq/` contains original model code
+* `struct2seq_pyg/` contains **NEW** PyTorch Geometric refactored version (cleaner, more modular)
+* `experiments/` contains scripts for training and evaluating the original model
 * `data/` contains scripts for building and processing datasets in the paper
+* `tutorial_struct2seq_pyg.ipynb` comprehensive tutorial for the PyTorch Geometric version
+
+## 🆕 PyTorch Geometric Version
+
+A modern, clean reimplementation using PyTorch Geometric is now available in `struct2seq_pyg/`!
+
+**Features:**
+- ✅ Clean, modular architecture
+- ✅ Comprehensive documentation and tutorial notebook
+- ✅ Built on PyTorch Geometric for efficient graph operations
+- ✅ Supports both GAT and MPNN layers
+- ✅ Easy to understand and extend
+
+**Quick Start:**
+```bash
+# Install dependencies
+pip install torch torch-geometric
+
+# Run example
+python example_pyg.py
+
+# Or explore the tutorial
+jupyter notebook tutorial_struct2seq_pyg.ipynb
+```
+
+See [`struct2seq_pyg/README.md`](struct2seq_pyg/README.md) for detailed documentation.
 
 ## Requirements
 * Python >= 3.0
