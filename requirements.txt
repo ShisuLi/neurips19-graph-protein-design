@@ -2,6 +2,15 @@
 torch>=1.0.0
 numpy>=1.16.0
 
+# PyTorch Geometric for sparse graph operations
+# Note: Install torch-geometric based on your PyTorch and CUDA version
+# See: https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html
+# For CPU-only: pip install torch-geometric
+# For CUDA: pip install torch-geometric -f https://data.pyg.org/whl/torch-{TORCH_VERSION}+{CUDA_VERSION}.html
+torch-geometric>=2.0.0
+torch-scatter>=2.0.0
+torch-sparse>=0.6.0
+
 # Structure loading and parsing
 gemmi>=0.6.0  # BinaryCIF, mmCIF, PDB support
 biopython>=1.79  # Alternative PDB parser

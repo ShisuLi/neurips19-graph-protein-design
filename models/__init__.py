@@ -46,6 +46,19 @@ from .decoder import (
     StructureDecoder,
 )
 
+from .data_pyg import (
+    to_pyg_data,
+    batch_to_pyg,
+    pyg_to_dense,
+    compute_pyg_edge_index_knn,
+)
+
+from .encoders_pyg import (
+    PyGGeometricAttentionLayer,
+    PyGStruct2SeqEncoder,
+    PyGToDenseAdapter,
+)
+
 __all__ = [
     # Geometry functions
     'get_local_frames',
@@ -74,6 +87,15 @@ __all__ = [
     'CrossAttention',
     'DecoderLayer',
     'StructureDecoder',
+    # PyG Data Utilities
+    'to_pyg_data',
+    'batch_to_pyg',
+    'pyg_to_dense',
+    'compute_pyg_edge_index_knn',
+    # PyG Encoders
+    'PyGGeometricAttentionLayer',
+    'PyGStruct2SeqEncoder',
+    'PyGToDenseAdapter',
     # Constants
     'AMINO_ACIDS',
     'AA_TO_IDX',
