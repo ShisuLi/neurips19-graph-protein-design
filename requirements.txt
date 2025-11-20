@@ -2,6 +2,10 @@
 torch>=1.0.0
 numpy>=1.16.0
 
+# Structure loading and parsing
+gemmi>=0.6.0  # BinaryCIF, mmCIF, PDB support
+biopython>=1.79  # Alternative PDB parser
+
 # Configuration and experiment tracking
 pyyaml>=5.1
 wandb>=0.12.0
