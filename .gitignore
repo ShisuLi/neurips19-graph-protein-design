@@ -15,3 +15,13 @@
 
 
 __pycache__/
+
+# Allow specific config and documentation files
+!requirements.txt
+!configs/*.yaml
+
+# Ignore experiment outputs
+logs/
+checkpoints/
+wandb/
+outputs/
