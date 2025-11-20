@@ -3,6 +3,7 @@
 This package contains core modules for protein structure processing:
 - geometry: Geometric transformations and local frame construction
 - data_loader: Data loading from BinaryCIF/PDB formats
+- encoders: GNN encoders for ablation studies
 """
 
 from .geometry import (
@@ -27,6 +28,15 @@ from .data_loader import (
     BACKBONE_ATOMS,
 )
 
+from .encoders import (
+    BaseEncoder,
+    GeometricAttentionLayer,
+    Struct2SeqGeometricEncoder,
+    EdgeAwareGATEncoder,
+    VanillaGCNEncoder,
+    StructureProbingHead,
+)
+
 __all__ = [
     # Geometry functions
     'get_local_frames',
@@ -42,6 +52,13 @@ __all__ = [
     'tensor_to_sequence',
     'ProteinDataset',
     'collate_protein_batch',
+    # Encoders
+    'BaseEncoder',
+    'GeometricAttentionLayer',
+    'Struct2SeqGeometricEncoder',
+    'EdgeAwareGATEncoder',
+    'VanillaGCNEncoder',
+    'StructureProbingHead',
     # Constants
     'AMINO_ACIDS',
     'AA_TO_IDX',
